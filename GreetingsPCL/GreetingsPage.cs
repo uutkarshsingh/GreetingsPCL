@@ -72,10 +72,25 @@ namespace GreetingsPCL
 
 			}
 
+			Button button = new Button
+			{
+				Text = "Tap me "
+			};
+
+			button.Clicked += (( object sender ,EventArgs args )=> {
+				System.Diagnostics.Debug.WriteLine("Printing the buttons values");
+				stackLayout.Children.Add(new Label
+				{
+					Text = "Button tapped at " + DateTime.Now.ToString("T")
+				});
+			}); 
+
+			stackLayout.Children.Add(button);
+
 			ScrollView scrollView = new ScrollView
-			{ 
-				Content = stackLayout 
-			}
+			{
+				Content = stackLayout
+			};
 
 			this.Content = scrollView;
 		}
