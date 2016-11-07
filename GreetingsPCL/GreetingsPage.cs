@@ -8,6 +8,10 @@ namespace GreetingsPCL
 	{
 		public GreetingsPage()
 		{
+			//There are some methods in which we can chekc whether the device belongs to a particular variety
+			//I have mentioned those in the comments.
+
+
 			if (Device.OS == TargetPlatform.iOS)
 			{
 				System.Diagnostics.Debug.WriteLine("Checkign whether the application is in the the iOS platform ");
