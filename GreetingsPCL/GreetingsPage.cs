@@ -8,19 +8,23 @@ namespace GreetingsPCL
 	{
 		public GreetingsPage()
 		{
-			Label lbl = new Label();
-			lbl.Text = "Greetings from Xamarin forms";
+			Label lbl = new Label()
+			{
+				Text = "Greetings from Xamarin forms"
+			};
 
 			Button btn = new Button()
 			{
 				Text = "Tap the button ",
 				FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
 				FontAttributes = FontAttributes.Bold,
-				FontSize = 24
+				FontFamily = Device.OnPlatform(	null,"Lobster-Regular.ttf#Lobster-Regular",null)
 			};
 
 			this.Content = new StackLayout()
 			{
+
+
 				Children = {
 					btn ,
 					lbl
