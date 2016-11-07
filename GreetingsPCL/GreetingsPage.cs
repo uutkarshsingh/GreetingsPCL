@@ -22,7 +22,9 @@ namespace GreetingsPCL
 			}
 			Label lbl = new Label()
 			{
-				Text = "Greetings from Xamarin forms"
+				Text = "Greetings from Xamarin forms",
+				HorizontalOptions = LayoutOptions.Center,
+				HorizontalTextAlignment = TextAlignment.Center
 			};
 
 			Button btn = new Button()
@@ -30,7 +32,8 @@ namespace GreetingsPCL
 				Text = "Tap the button ",
 				FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
 				FontAttributes = FontAttributes.Bold,
-				FontFamily = Device.OnPlatform(	null,"Lobster-Regular.ttf#Lobster-Regular",null)
+				FontFamily = Device.OnPlatform(	null,"Lobster-Regular.ttf#Lobster-Regular",null) ,
+				HorizontalOptions = LayoutOptions.Center
 			};
 			this.Padding = new Thickness(0, 20, 0, 0);
 			this.Content = new StackLayout()
