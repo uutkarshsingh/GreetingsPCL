@@ -10,7 +10,7 @@ namespace GreetingsPCL
 		{
 			//There are some methods in which we can chekc whether the device belongs to a particular variety
 			//I have mentioned those in the comments.
-
+			this.BackgroundColor = Color.Default;
 
 			if (Device.OS == TargetPlatform.iOS)
 			{
@@ -24,7 +24,9 @@ namespace GreetingsPCL
 			{
 				Text = "Greetings from Xamarin forms",
 				HorizontalOptions = LayoutOptions.Center,
-				HorizontalTextAlignment = TextAlignment.Center
+				HorizontalTextAlignment = TextAlignment.Center,
+				BackgroundColor = Color.Accent,
+				TextColor = Color.Accent
 			};
 
 			Button btn = new Button()
@@ -33,6 +35,8 @@ namespace GreetingsPCL
 				FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
 				FontAttributes = FontAttributes.Bold,
 				FontFamily = Device.OnPlatform(	null,"Lobster-Regular.ttf#Lobster-Regular",null) ,
+				BackgroundColor = Color.Accent,
+				TextColor = Color.Accent,
 				HorizontalOptions = LayoutOptions.Center
 			};
 			this.Padding = new Thickness(0, 20, 0, 0);
