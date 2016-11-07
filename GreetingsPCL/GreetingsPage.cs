@@ -25,8 +25,6 @@ namespace GreetingsPCL
 				Text = "Greetings from Xamarin forms",
 				HorizontalOptions = LayoutOptions.Center,
 				HorizontalTextAlignment = TextAlignment.Center,
-				BackgroundColor = Color.Accent,
-				TextColor = Color.Accent
 			};
 
 			Button btn = new Button()
@@ -35,18 +33,51 @@ namespace GreetingsPCL
 				FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
 				FontAttributes = FontAttributes.Bold,
 				FontFamily = Device.OnPlatform(	null,"Lobster-Regular.ttf#Lobster-Regular",null) ,
-				BackgroundColor = Color.Accent,
-				TextColor = Color.Accent,
 				HorizontalOptions = LayoutOptions.Center
 			};
 			this.Padding = new Thickness(0, 20, 0, 0);
-			this.Content = new StackLayout()
+
+
+
+
+			Color[] arrayOfColors =
 			{
-				Children = {
-					btn ,
-					lbl
-				}
+				 Color.White, Color.Silver, Color.Gray, Color.Black, Color.Red,
+ 				Color.Maroon, Color.Yellow, Color.Olive, Color.Lime, Color.Green,
+ 				Color.Aqua, Color.Teal, Color.Blue, Color.Navy, Color.Pink,
+ 				Color.Fuchsia, Color.Purple
 			};
+
+
+			string[] colorNames =
+			{
+				 "White", "Silver", "Gray", "Black", "Red",
+ 				"Maroon", "Yellow", "Olive", "Lime", "Green",
+ 				"Aqua", "Teal", "Blue", "Navy", "Pink",
+ 				"Fuchsia", "Purple"
+			};
+
+
+			StackLayout stackLayout = new StackLayout();
+			stackLayout.Spacing = 0;
+			for (int count = 0; count < colorNames.Length; count++)
+			{ 
+			 	Label label = new Label
+				{
+					Text = colorNames[count],
+					TextColor = arrayOfColors[count],
+					FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+				};
+				stackLayout.Children.Add(label);
+
+			}
+
+			ScrollView scrollView = new ScrollView
+			{ 
+				Content = stackLayout 
+			}
+
+			this.Content = scrollView;
 		}
 	}
 }
