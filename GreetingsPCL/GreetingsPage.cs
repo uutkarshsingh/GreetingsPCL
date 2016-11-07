@@ -8,6 +8,14 @@ namespace GreetingsPCL
 	{
 		public GreetingsPage()
 		{
+			if (Device.OS == TargetPlatform.iOS)
+			{
+				System.Diagnostics.Debug.WriteLine("Checkign whether the application is in the the iOS platform ");
+			}
+			else if (Device.OS == TargetPlatform.Android)
+			{
+				System.Diagnostics.Debug.WriteLine("ANDROID PLATFORM");
+			}
 			Label lbl = new Label()
 			{
 				Text = "Greetings from Xamarin forms"
@@ -20,11 +28,9 @@ namespace GreetingsPCL
 				FontAttributes = FontAttributes.Bold,
 				FontFamily = Device.OnPlatform(	null,"Lobster-Regular.ttf#Lobster-Regular",null)
 			};
-
+			this.Padding = new Thickness(0, 20, 0, 0);
 			this.Content = new StackLayout()
 			{
-
-
 				Children = {
 					btn ,
 					lbl
