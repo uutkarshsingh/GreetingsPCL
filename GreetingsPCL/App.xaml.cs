@@ -8,7 +8,8 @@ namespace GreetingsPCL
 		{
 			InitializeComponent();
 
-			MainPage = new GreetingsPCLPage();
+			//MainPage = new GreetingsPCLPage();
+			MainPage = new GreetingsPage();
 		}
 
 		protected override void OnStart()
