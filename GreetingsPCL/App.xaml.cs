@@ -9,7 +9,7 @@ namespace GreetingsPCL
 			InitializeComponent();
 
 			//MainPage = new GreetingsPCLPage();
-			MainPage = new GreetingsPCLPage();
+			MainPage = new MonkeyTap();
 		}
 
 		protected override void OnStart()
