@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace GreetingsPCL
 {
@@ -7,6 +8,10 @@ namespace GreetingsPCL
 		public GreetingsPCLPage()
 		{
 			InitializeComponent();
+		}
+		public void OnBoxViewTapped(object sender, EventArgs arg)
+		{
+			System.Diagnostics.Debug.WriteLine("Tapped the BOXVIew");
 		}
 	}
 }

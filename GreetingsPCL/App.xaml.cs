@@ -9,7 +9,7 @@ namespace GreetingsPCL
 			InitializeComponent();
 
 			//MainPage = new GreetingsPCLPage();
-			MainPage = new GreetingsPage();
+			MainPage = new GreetingsPCLPage();
 		}
 
 		protected override void OnStart()
