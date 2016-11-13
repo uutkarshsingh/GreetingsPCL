@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:GreetingsPCL" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GreetingsPCL.GreetingsPCLPage">
-   <Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
-   <BoxView Color="Blue" MinimumWidthRequest="100" MinimumHeightRequest="100">
-      <BoxView.GestureRecognizers>
-         <TapGestureRecognizer Tapped="OnBoxViewTapped" />
-      </BoxView.GestureRecognizers>
-   </BoxView>
+
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness"
+					iOS="10,20,0,0"
+					Android="10,0"
+					WinPhone="10,0"/>
+	</ContentPage.Padding>
+	<ScrollView>
+		<StackLayout>
+			<StackLayout.Resources>
+				<ResourceDictionary>
+					<Style TargetType="Entry">
+							<Setter Property="VerticalOptions" Value="CenterAndExpand">
+							</Setter>
+					</Style>
+				</ResourceDictionary>
+			</StackLayout.Resources>
+
+			<Entry Placeholder="Default" Keyboard="Default"/>
+			<Entry Placeholder="Text" Keyboard="Text"/>
+			<Entry Placeholder="Chat" Keyboard="Chat"/>
+			<Entry Placeholder="Url" Keyboard="Url"/>
+			<Entry Placeholder="Email" Keyboard="Email"/>
+			<Entry Placeholder="Telephone" Keyboard="Telephone"/>
+			<Entry Placeholder="Numeric" Keyboard="Numeric"/>
+			<Entry Placeholder="Default" Keyboard="Default"/>
+			<Entry Placeholder="Text" Keyboard="Text"/>
+			<Entry Placeholder="Chat  " Keyboard="Chat"/>
+			<Entry Placeholder="Url" Keyboard="Url"/>
+			<Entry Placeholder="Email" Keyboard="Email"/>
+			<Entry Placeholder="Telephone" Keyboard="Telephone"/>
+			<Entry Placeholder="Numeric" Keyboard="Numeric"/>
+			<Entry Placeholder="Default" Keyboard="Default"/>
+			<Entry Placeholder="Text" Keyboard="Text"/>
+			<Entry Placeholder="Chat" Keyboard="Chat"/>
+			<Entry Placeholder="Url" Keyboard="Url"/>
+			<Entry Placeholder="Email" Keyboard="Email"/>
+			<Entry Placeholder="Telephone" Keyboard="Telephone"/>
+			<Entry Placeholder="Numeric" Keyboard="Numeric"/>
+
+
+		</StackLayout>
+	</ScrollView>
 </ContentPage>
